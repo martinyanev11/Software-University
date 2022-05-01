@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Excellent Result", "01. Excellent Result\01. Excellent Result.csproj", "{656847E6-48F6-43E9-87D1-025EF1FEA255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Excellent Result", "01. Excellent Result\01. Excellent Result.csproj", "{656847E6-48F6-43E9-87D1-025EF1FEA255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Greater Number", "02. Greater Number\02. Greater Number.csproj", "{E0B02096-C769-4BA9-8260-6D4EF4B83D49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Greater Number", "02. Greater Number\02. Greater Number.csproj", "{E0B02096-C769-4BA9-8260-6D4EF4B83D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Even or Odd", "03. Even or Odd\03. Even or Odd.csproj", "{FC041785-A0D5-45D3-9AF9-CABFB64CA3EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Even or Odd", "03. Even or Odd\03. Even or Odd.csproj", "{FC041785-A0D5-45D3-9AF9-CABFB64CA3EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Password Guess", "04. Password Guess\04. Password Guess.csproj", "{E252B42E-E688-43C2-BC25-4A69E5178BFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Password Guess", "04. Password Guess\04. Password Guess.csproj", "{E252B42E-E688-43C2-BC25-4A69E5178BFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Number 100 to 200", "05. Number 100 to 200\05. Number 100 to 200.csproj", "{71CBA838-103E-4C3B-A7B0-323353F2FE85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Number 100 to 200", "05. Number 100 to 200\05. Number 100 to 200.csproj", "{71CBA838-103E-4C3B-A7B0-323353F2FE85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Speed Info", "06. Speed Info\06. Speed Info.csproj", "{1CAD6EA6-6A74-426C-869F-EFD797A9ED5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Speed Info", "06. Speed Info\06. Speed Info.csproj", "{1CAD6EA6-6A74-426C-869F-EFD797A9ED5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Area of Figures", "07. Area of Figures\07. Area of Figures.csproj", "{D78C6458-AF6F-4AEA-8072-0A1FD72BDE37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Area of Figures", "07. Area of Figures\07. Area of Figures.csproj", "{D78C6458-AF6F-4AEA-8072-0A1FD72BDE37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
