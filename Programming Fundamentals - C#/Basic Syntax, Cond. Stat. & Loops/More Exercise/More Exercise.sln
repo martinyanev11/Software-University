@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sort Numbers", "01. Sort Numbers\01. Sort Numbers.csproj", "{6C8B7240-9169-420E-95D9-792EE263DEF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Sort Numbers", "01. Sort Numbers\01. Sort Numbers.csproj", "{6C8B7240-9169-420E-95D9-792EE263DEF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. English Name", "02. English Name\02. English Name.csproj", "{31FAAA8A-3C06-49C8-9D35-BC9472DA153E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. English Name", "02. English Name\02. English Name.csproj", "{31FAAA8A-3C06-49C8-9D35-BC9472DA153E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Gaming Store", "03. Gaming Store\03. Gaming Store.csproj", "{769DAF6B-2B0E-4ACF-98B5-E8C8563FFE62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Gaming Store", "03. Gaming Store\03. Gaming Store.csproj", "{769DAF6B-2B0E-4ACF-98B5-E8C8563FFE62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Reverse String", "04. Reverse String\04. Reverse String.csproj", "{BF42E3C0-BD68-452E-A9C4-2A97C912F6BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Reverse String", "04. Reverse String\04. Reverse String.csproj", "{BF42E3C0-BD68-452E-A9C4-2A97C912F6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Messages", "05. Messages\05. Messages.csproj", "{F0062A14-212B-494C-A5D0-F6BB2B9A2FD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BF42E3C0-BD68-452E-A9C4-2A97C912F6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF42E3C0-BD68-452E-A9C4-2A97C912F6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF42E3C0-BD68-452E-A9C4-2A97C912F6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0062A14-212B-494C-A5D0-F6BB2B9A2FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0062A14-212B-494C-A5D0-F6BB2B9A2FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0062A14-212B-494C-A5D0-F6BB2B9A2FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0062A14-212B-494C-A5D0-F6BB2B9A2FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
