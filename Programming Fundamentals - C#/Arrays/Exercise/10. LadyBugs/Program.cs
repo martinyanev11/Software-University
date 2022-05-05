@@ -40,7 +40,8 @@ namespace _10._LadyBugs
                     int ladybugFlyLength = int.Parse(commandReading[2]);
 
                     // EXECUTING THE COMMAND GIVEN
-                    if (field[ladybugStartingIndex - ladybugFlyLength] >= 0 && field[ladybugStartingIndex + ladybugFlyLength] < fieldSize)
+                    // Check if the ladybug index exists in the array
+                    if (field[ladybugStartingIndex] >= 0 && field[ladybugStartingIndex] < fieldSize)
                     {
                         if (field[ladybugStartingIndex] == 1) // IF THERE IS LADYBUG IN INDEX
                         {
@@ -49,19 +50,21 @@ namespace _10._LadyBugs
                             // DETERMINE THE DIRECTION
                             if (ladybugMovementDirection == "right")
                             {
-                                if (ladybugStartingIndex + ladybugFlyLength < fieldSize)
+                                if (ladybugStartingIndex + ladybugFlyLength < fieldSize) // Check if the bug lands within the array scope
                                 {
-                                    if (field[ladybugStartingIndex + ladybugFlyLength] != 1)
+                                    if (field[ladybugStartingIndex + ladybugFlyLength] != 1) // If no other ladybug on that index
                                     {
-                                        field[ladybugStartingIndex + ladybugFlyLength] = 1;
+                                        field[ladybugStartingIndex + ladybugFlyLength] = 1; // Then it lands there
                                     }
-                                    else if (field[ladybugStartingIndex + ladybugFlyLength] == 1)
+                                    else
                                     {
+                                        // Keep flying till it finds empty spot within the array
                                         for (int i = ladybugStartingIndex; i < fieldSize - 1; i += ladybugFlyLength)
                                         {
                                             if (field[i + ladybugFlyLength] != 1)
                                             {
-                                                field[i + ladybugFlyLength] = 1;
+                                                field[i + ladybugFlyLength] = 1; // Found empty spot and landed
+                                                break;
                                             }
                                         }
                                     }
@@ -71,18 +74,18 @@ namespace _10._LadyBugs
                             {
                                 if (ladybugStartingIndex - ladybugFlyLength >= 0)
                                 {
-                                    field[ladybugStartingIndex - ladybugFlyLength] = 1;
                                     if (field[ladybugStartingIndex - ladybugFlyLength] != 1)
                                     {
                                         field[ladybugStartingIndex - ladybugFlyLength] = 1;
                                     }
-                                    else if (field[ladybugStartingIndex - ladybugFlyLength] == 1)
+                                    else
                                     {
-                                        for (int i = ladybugStartingIndex; i == 0; i -= ladybugFlyLength)
+                                        for (int i = ladybugStartingIndex; i >= 0; i -= ladybugFlyLength)
                                         {
                                             if (field[i - ladybugFlyLength] != 1)
                                             {
                                                 field[i - ladybugFlyLength] = 1;
+                                                break;
                                             }
                                         }
                                     }

@@ -26,10 +26,11 @@ namespace _09._Kamino_Factory
                 if (sequnceInput == "Clone them!") // CHECK IF THEY WANT TO END PROGRAM
                 {
                     orderIsGiven = true;
+                    break;
                 }
                 else
                 {
-                    stringArray = sequnceInput.Split("!"); // CONVERT STRING INPUT FROM USER TO STRING ARRAY
+                    stringArray = sequnceInput.Split("!", StringSplitOptions.RemoveEmptyEntries); // CONVERT STRING INPUT FROM USER TO STRING ARRAY
                     currentDNAIndex++;
                     int[] currentArray = new int[sequncesLenght];
                     int currentSequnceSum = 0; // CURRENT ARRAY SUM

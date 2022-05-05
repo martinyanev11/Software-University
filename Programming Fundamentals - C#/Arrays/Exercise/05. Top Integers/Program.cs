@@ -8,14 +8,14 @@ namespace _05._Top_Integers
         static void Main(string[] args)
         {
             int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int counter = 0;
+            int counter = 1;
 
-            foreach (int item in array)
+            foreach (int number in array)
             {
                 bool isTopInteger = false;
                 for (int i = counter; i < array.Length; i++)
                 {
-                    if (item < array[i])
+                    if (number <= array[i])
                     {
                         break;
                     }
@@ -24,9 +24,13 @@ namespace _05._Top_Integers
                         isTopInteger = true;
                     }
                 }
+                if (counter == array.Length)
+                {
+                    isTopInteger = true;
+                }
                 if (isTopInteger == true)
                 {
-                    Console.Write(item + " ");
+                    Console.Write(number + " ");
                 }
                 counter++;
             }
