@@ -12,16 +12,20 @@ namespace _10._Pokemon
 
             int pokeCount = 0;
             int initialpokePower = pokePower;
-            bool isDivisibleByHalf = (pokePower - pokePower / 2) / exhaustionFactor != 0;
+            bool isDivisibleByHalf = pokePower % 2 == 0;
 
             while (pokePower >= distance)
             {
                 pokePower -= distance;
                 pokeCount++;
 
-                if (isDivisibleByHalf && pokePower == initialpokePower / 2)
+                if (pokePower == initialpokePower / 2 && isDivisibleByHalf)
                 {
                     pokePower /= exhaustionFactor;
+                }
+                else
+                {
+                    continue;
                 }
             }
 
