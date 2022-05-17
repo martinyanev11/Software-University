@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace _4._Matching_Brackets
@@ -8,19 +7,24 @@ namespace _4._Matching_Brackets
     {
         static void Main(string[] args)
         {
-            string[] expression = Console.ReadLine().Split();
+            string expression = Console.ReadLine();
 
-            Stack<string> subExpression = new Stack<string>();
-
-            int startIndex = 0;
-            int endIndex = 0;
+            Stack<int> bracketsIndexes = new Stack<int>();
+            string subExpression = string.Empty;
 
             for (int i = 0; i < expression.Length; i++)
             {
-                if (expression[i] == "(")
+                if (expression[i] == '(')
                 {
-                    // -2:13 min on stream https://softuni.bg/trainings/live/details?trainingLabId=85
-                    // to be continued.
+                    bracketsIndexes.Push(i);
+                }
+                if (expression[i] == ')')
+                {
+                    int startIndex = bracketsIndexes.Pop();
+                    int endIndex = i;
+
+                    subExpression = expression.Substring(startIndex, (endIndex - startIndex + 1));
+                    Console.WriteLine(subExpression);
                 }
             }
         }
