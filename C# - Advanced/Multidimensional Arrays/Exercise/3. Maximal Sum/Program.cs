@@ -17,7 +17,7 @@ namespace _3._Maximal_Sum
             // Fill the matrix
             for (int i = 0; i < matrix.GetLength(0); i++) // matrix.GetLength(0) - the number of rows
             {
-                int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                int[] input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
                 for (int j = 0; j < matrix.GetLength(1); j++) // matrix.GetLength(1) - the number of columns
                 {
@@ -27,7 +27,7 @@ namespace _3._Maximal_Sum
 
             // Find the 2x2 subMatrix with biggest sum
             long biggestSum = long.MinValue;
-            long currSum = 0;
+            long currSum = long.MinValue;
             int bestRowIndex = 0;
             int bestColIndex = 0;
 

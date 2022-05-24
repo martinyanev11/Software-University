@@ -8,95 +8,106 @@ namespace _7._Knight_Game
     {
         static void Main(string[] args)
         {
-            // Initialize the square chess board (matrix) filled with knights
             int boardSize = int.Parse(Console.ReadLine());
+
             char[,] board = new char[boardSize, boardSize];
 
-            for (int row = 0; row < boardSize; row++)
+            for (int row = 0; row < board.GetLength(0); row++)
             {
-                string rowInput = Console.ReadLine().Trim();
-                char[] rowArray = new char[rowInput.Length];
-                for (int i = 0; i < rowInput.Length; i++)
+                string input = Console.ReadLine();
+
+                for (int col = 0; col < board.GetLength(1); col++)
                 {
-                    rowArray[i] = rowInput[i];
-                }
-                for (int col = 0; col < boardSize; col++)
-                {
-                    board[row, col] = rowArray[col];
+                    board[row, col] = input[col];
                 }
             }
 
-            int removedKnightsCounter = 0;
+            int removedKnightsCount = 0;
 
-            // Check for colliding knights
-            for (int r = 0; r < boardSize - 1; r++)
+
+            while (true)
             {
-                for (int c = 0; c < boardSize; c++)
+                int maxAttack = 0;
+                int rowAttackIndex = 0;
+                int colAttackIndex = 0;
+
+                for (int row = 0; row < board.GetLength(0); row++)
                 {
-                    if (board[r,c] == 'K') // Check if we have knight in current matrix index
+
+                    for (int col = 0; col < board.GetLength(1); col++)
                     {
-                        // Check #1 for collision
-                        if (c - 2 >= 0 && c - 2 < boardSize)
+                        if (board[row, col] == '0')
                         {
-                            if (r + 1 >= 0 && r + 1 < boardSize)
-                            {
-                                if (board[r, c] == board[r + 1, c - 2])
-                                {
-                                    board[r + 1, c - 2] = '0';
-                                    removedKnightsCounter++;
-                                    //continue;
-                                }
-                            }
+                            continue;
                         }
 
-                        // Check #2 for collision
-                        if (c - 1 >= 0 && c - 1 < boardSize)
+                        int currentAttacks = 0;
+
+                        if (isInRange(board, row - 2, col - 1) && board[row - 2, col - 1] == 'K')
                         {
-                            if (r + 2 >= 0 && r + 2 < boardSize)
-                            {
-                                if (board[r, c] == board[r + 2, c - 1])
-                                {
-                                    board[r + 2, c - 1] = '0';
-                                    removedKnightsCounter++;
-                                    //continue;
-                                }
-                            }
+                            currentAttacks++;
                         }
 
-                        // Check #3 for collision
-                        if (c + 1 >= 0 && c + 1 < boardSize)
+                        if (isInRange(board, row - 2, col + 1) && board[row - 2, col + 1] == 'K')
                         {
-                            if (r + 2 >= 0 && r + 2 < boardSize)
-                            {
-                                if (board[r, c] == board[r + 2, c + 1])
-                                {
-                                    board[r + 2, c + 1] = '0';
-                                    removedKnightsCounter++;
-                                    //continue;
-                                }
-                            }
-                            
+                            currentAttacks++;
                         }
 
-                        // Check #4 for collision
-                        if (c + 2 >= 0 && c + 2 < boardSize)
+                        if (isInRange(board, row - 1, col - 2) && board[row - 1, col - 2] == 'K')
                         {
-                            if (r + 1 >= 0 && r + 1 < boardSize)
-                            {
-                                if (board[r, c] == board[r + 1, c + 2])
-                                {
-                                    board[r + 1, c + 2] = '0';
-                                    removedKnightsCounter++;
-                                    //continue;
-                                }
-                            } 
+                            currentAttacks++;
+                        }
+
+                        if (isInRange(board, row + 1, col - 2) && board[row + 1, col - 2] == 'K')
+                        {
+                            currentAttacks++;
+                        }
+
+                        if (isInRange(board, row + 1, col + 2) && board[row + 1, col + 2] == 'K')
+                        {
+                            currentAttacks++;
+                        }
+
+                        if (isInRange(board, row - 1, col + 2) && board[row - 1, col + 2] == 'K')
+                        {
+                            currentAttacks++;
+                        }
+
+                        if (isInRange(board, row + 2, col + 1) && board[row + 2, col + 1] == 'K')
+                        {
+                            currentAttacks++;
+                        }
+
+                        if (isInRange(board, row + 2, col - 1) && board[row + 2, col - 1] == 'K')
+                        {
+                            currentAttacks++;
+                        }
+
+                        if (currentAttacks > maxAttack)
+                        {
+                            maxAttack = currentAttacks;
+                            rowAttackIndex = row;
+                            colAttackIndex = col;
                         }
                     }
-                    
+                }
+
+                if (maxAttack > 0)
+                {
+                    board[rowAttackIndex, colAttackIndex] = '0';
+                    removedKnightsCount++;
+                }
+                else
+                {
+                    Console.WriteLine(removedKnightsCount);
+                    break;
                 }
             }
-
-            Console.WriteLine(removedKnightsCounter);
         }
-    }
+
+        private static bool isInRange(char[,] board, int row, int col)
+        {
+            return row >= 0 && row < board.GetLength(0) && col >= 0 && col < board.GetLength(1);
+        }
+    }    
 }
