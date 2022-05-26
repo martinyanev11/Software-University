@@ -23,7 +23,8 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
 
             // Start game
             bool steppedOnBunny = false;
-            for (int rounds = 0; rounds < command.Count; rounds++)
+            bool playerWon = false;
+            while (command.Count != 0)
             {
                 char nextCommand = command.Dequeue();
 
@@ -36,7 +37,7 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
                         steppedOnBunny = true;
                     }
                     BunniesMultiplication(field);
-                    if (steppedOnBunny)
+                    if (steppedOnBunny == true)
                     {
                         break;
                     }
@@ -49,12 +50,14 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
                 }
                 else // Player won
                 {
+                    playerWon = true;
+                    BunniesMultiplication(field);
                     PlayerWonMessage(field, playerCoordinates);
                     break;
                 }
             }
 
-            if (steppedOnBunny)
+            if (steppedOnBunny == true && playerWon == false)
             {
                 PlayerLostMessage(field, playerCoordinates);
             }
@@ -63,7 +66,7 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
 
         private static void PlayerWonMessage(char[,] field, int[] playerCoordinates)
         {
-            field[playerCoordinates[0], playerCoordinates[1]] = '.'; // replace 'P' with '.'
+            //field[playerCoordinates[0], playerCoordinates[1]] = '.'; // replace 'P' with '.'
 
             for (int row = 0; row < field.GetLength(0); row++)
             {
@@ -101,6 +104,7 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
                     {
                         playerCoordinates[0] = row;
                         playerCoordinates[1] = col;
+                        field[playerCoordinates[0], playerCoordinates[1]] = '.'; // replace 'P' with '.'
                     }
                 }
             }
@@ -122,7 +126,8 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
             }
 
             // Multiply each bunny to all nearby legit indexes
-            for (int i = 0; i < allBunnyCoordinates.Count; i++)
+            //for (int i = 0; i < allBunnyCoordinates.Count; i++)
+            while (allBunnyCoordinates.Count != 0)
             {
                 int[] currentBunnyCoordinates = allBunnyCoordinates.Dequeue();
                 int bunnyRow = currentBunnyCoordinates[0];
@@ -135,20 +140,20 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
 
         private static void MultiplicationProcess(char[,] field, int row, int col)
         {
-            if (row - 1 >= 0 && col - 1 >= 0) //#1 top left
-            {
-                field[row - 1, col - 1] = 'B';
-            }
+            //if (row - 1 >= 0 && col - 1 >= 0) //#1 top left
+            //{
+            //    field[row - 1, col - 1] = 'B';
+            //}
 
             if (col - 1 >= 0) //#2 left
             {
                 field[row, col - 1] = 'B';
             }
 
-            if (row + 1 < field.GetLength(0) && col - 1 >= 0) // #3 bottom left
-            {
-                field[row + 1, col - 1] = 'B';
-            }
+            //if (row + 1 < field.GetLength(0) && col - 1 >= 0) // #3 bottom left
+            //{
+            //    field[row + 1, col - 1] = 'B';
+            //}
 
             if (row - 1 >= 0) //#4 top
             {
@@ -160,20 +165,20 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
                 field[row + 1, col] = 'B';
             }
 
-            if (row - 1 >= 0 && col + 1 < field.GetLength(1)) //#6 top right
-            {
-                field[row - 1, col + 1] = 'B';
-            }
+            //if (row - 1 >= 0 && col + 1 < field.GetLength(1)) //#6 top right
+            //{
+            //    field[row - 1, col + 1] = 'B';
+            //}
 
             if (col + 1 < field.GetLength(1)) //#7 right
             {
                 field[row, col + 1] = 'B';
             }
 
-            if (row + 1 < field.GetLength(0) && col + 1 < field.GetLength(1)) //#8 bottom right
-            {
-                field[row + 1, col + 1] = 'B';
-            }
+            //if (row + 1 < field.GetLength(0) && col + 1 < field.GetLength(1)) //#8 bottom right
+            //{
+            //    field[row + 1, col + 1] = 'B';
+            //}
         }
 
         private static bool SteppedOnBunnyCheck(char[,] field, int[] playerCoordinates)
@@ -237,4 +242,3 @@ namespace _10._Radioactive_Mutant_Vampire_Bunnies
         }
     }
 }
-
