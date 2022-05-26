@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32428.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Count Same Values in Array", "01. Count Same Values in Array\01. Count Same Values in Array.csproj", "{08C082FC-B3D1-4080-91AF-1E9FAA609969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Average Student Grades", "02. Average Student Grades\02. Average Student Grades.csproj", "{A31F58AA-707B-4997-B85B-4175048968B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Largest 3 Numbers", "03. Largest 3 Numbers\03. Largest 3 Numbers.csproj", "{B6728BC9-8CFA-451A-81E8-6591761B794F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Product Shop", "04. Product Shop\04. Product Shop.csproj", "{F3AC6E68-21CB-4629-8ED6-C5882AFF572D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08C082FC-B3D1-4080-91AF-1E9FAA609969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C082FC-B3D1-4080-91AF-1E9FAA609969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C082FC-B3D1-4080-91AF-1E9FAA609969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C082FC-B3D1-4080-91AF-1E9FAA609969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31F58AA-707B-4997-B85B-4175048968B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31F58AA-707B-4997-B85B-4175048968B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31F58AA-707B-4997-B85B-4175048968B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31F58AA-707B-4997-B85B-4175048968B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6728BC9-8CFA-451A-81E8-6591761B794F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6728BC9-8CFA-451A-81E8-6591761B794F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6728BC9-8CFA-451A-81E8-6591761B794F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6728BC9-8CFA-451A-81E8-6591761B794F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AC6E68-21CB-4629-8ED6-C5882AFF572D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AC6E68-21CB-4629-8ED6-C5882AFF572D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AC6E68-21CB-4629-8ED6-C5882AFF572D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AC6E68-21CB-4629-8ED6-C5882AFF572D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3BD1613-277A-4D10-81C9-70C513596669}
+	EndGlobalSection
+EndGlobal
