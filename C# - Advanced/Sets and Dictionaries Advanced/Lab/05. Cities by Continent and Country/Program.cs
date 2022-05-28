@@ -13,7 +13,7 @@ namespace _05._Cities_by_Continent_and_Country
             int linesToRead = int.Parse(Console.ReadLine());
             for (int i = 0; i < linesToRead; i++)
             {
-                string[] cmdArgs = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                string[] cmdArgs = Console.ReadLine().Split();
                 string continentName = cmdArgs[0];
                 string countryName = cmdArgs[1];
                 string cityName = cmdArgs[2];
@@ -31,10 +31,11 @@ namespace _05._Cities_by_Continent_and_Country
                 }
 
                 // Add city to the list in the country
-                if (!continentDictionary[continentName][countryName].Contains(cityName))
-                {
-                    continentDictionary[continentName][countryName].Add(cityName);
-                }
+                continentDictionary[continentName][countryName].Add(cityName);
+                //if (!continentDictionary[continentName][countryName].Contains(cityName))
+                //{
+                    
+                //}
 
             }
             // Print the result (revision)
