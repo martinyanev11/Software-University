@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddLines", "OddLines\OddLines.csproj", "{3287A997-95D9-4E20-92F7-0572AF57FE4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddLines", "OddLines\OddLines.csproj", "{3287A997-95D9-4E20-92F7-0572AF57FE4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineNumbers", "LineNumbers\LineNumbers.csproj", "{2D029418-0C36-4C7F-9944-45B3C9043DBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{0EF0E416-82AB-48EF-AAC0-1270CA76698D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3287A997-95D9-4E20-92F7-0572AF57FE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3287A997-95D9-4E20-92F7-0572AF57FE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3287A997-95D9-4E20-92F7-0572AF57FE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D029418-0C36-4C7F-9944-45B3C9043DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D029418-0C36-4C7F-9944-45B3C9043DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D029418-0C36-4C7F-9944-45B3C9043DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D029418-0C36-4C7F-9944-45B3C9043DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF0E416-82AB-48EF-AAC0-1270CA76698D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF0E416-82AB-48EF-AAC0-1270CA76698D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF0E416-82AB-48EF-AAC0-1270CA76698D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF0E416-82AB-48EF-AAC0-1270CA76698D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
