@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace IteratorsAndComparators
 {
@@ -21,7 +22,16 @@ namespace IteratorsAndComparators
             //}
 
             // PROBLEM 03. ComparableBook:
-            foreach (var book in libraryTwo)
+            //foreach (var book in libraryTwo)
+            //{
+            //    Console.WriteLine(book);
+            //}
+
+            // PROBLEM 04. BookComparer:
+            var sortedLib = libraryTwo.ToArray();
+            Array.Sort(sortedLib, new BookComparator());
+
+            foreach (var book in sortedLib)
             {
                 Console.WriteLine(book);
             }
