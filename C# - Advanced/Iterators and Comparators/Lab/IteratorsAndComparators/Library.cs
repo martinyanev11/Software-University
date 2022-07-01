@@ -17,9 +17,10 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            for (int i = 0; i < this.books.Count; i++)
+            var sortedList = this.books.OrderBy(book => book).ToList();
+            for (int i = 0; i < sortedList.Count; i++)
             {
-                yield return this.books[i];
+                yield return sortedList[i];
             }
             //return new LibraryIterator(this.books);
         }

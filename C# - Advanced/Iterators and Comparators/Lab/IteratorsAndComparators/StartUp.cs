@@ -20,7 +20,7 @@ namespace IteratorsAndComparators
             //    Console.WriteLine(book.Title);
             //}
 
-            // PROBLEM 03. ComparableBook
+            // PROBLEM 03. ComparableBook:
             foreach (var book in libraryTwo)
             {
                 Console.WriteLine(book);
