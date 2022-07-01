@@ -6,6 +6,7 @@ namespace IteratorsAndComparators
     {
         static void Main(string[] args)
         {
+            // PROBLEM 01. Library:
             Book bookOne = new Book("Animal Farm", 2003, "George Orwell");
             Book bookTwo = new Book("The Documents in the Case", 2002,
                 "Dorothy Sayers", "Robert Eustace");
@@ -13,6 +14,12 @@ namespace IteratorsAndComparators
 
             Library libraryOne = new Library();
             Library libraryTwo = new Library(bookOne, bookTwo, bookThree);
+
+            // PROBLEM 02. LibraryIterator:
+            foreach (var book in libraryTwo)
+            {
+                Console.WriteLine(book.Title);
+            }
         }
     }
 }
