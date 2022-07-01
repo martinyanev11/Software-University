@@ -17,44 +17,49 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            return new LibraryIterator(this.books);
+            for (int i = 0; i < this.books.Count; i++)
+            {
+                yield return this.books[i];
+            }
+            //return new LibraryIterator(this.books);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
         }
+        // Long way to do it
 
-        class LibraryIterator : IEnumerator<Book>
-        {
-            private List<Book> books;
-            private int position;
+        //class LibraryIterator : IEnumerator<Book>
+        //{
+        //    private List<Book> books;
+        //    private int position;
 
-            public LibraryIterator(List<Book> books)
-            {
-                this.books = books;
-                Reset();
-            }
+        //    public LibraryIterator(List<Book> books)
+        //    {
+        //        this.books = books;
+        //        Reset();
+        //    }
 
-            public Book Current => this.books[position];
+        //    public Book Current => this.books[position];
 
-            object IEnumerator.Current => this.Current;
+        //    object IEnumerator.Current => this.Current;
 
-            public void Dispose()
-            {
-                // Not needed
-            }
+        //    public void Dispose()
+        //    {
+        //        // Not needed
+        //    }
 
-            public bool MoveNext()
-            {
-                this.position++;
-                return position < this.books.Count;
-            }
+        //    public bool MoveNext()
+        //    {
+        //        this.position++;
+        //        return position < this.books.Count;
+        //    }
 
-            public void Reset()
-            {
-                this.position = -1;
-            }
-        }
+        //    public void Reset()
+        //    {
+        //        this.position = -1;
+        //    }
+        //}
     }
 }
