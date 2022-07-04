@@ -8,7 +8,23 @@ namespace NeedForSpeed
     {
         public Vehicle(int horsePower, double fuel)
         {
+            this.HorsePower = horsePower;
+            this.Fuel = fuel;
+            this.DefaultFuelConsumption = 1.25;
+        }
 
+        public double DefaultFuelConsumption { get; set; }
+
+        public virtual double FuelConsumption { get; set; }
+
+        public double Fuel { get; set; }
+
+        public int HorsePower { get; set; }
+
+        public virtual void Drive(double kilometers)
+        {
+            this.FuelConsumption = this.DefaultFuelConsumption * kilometers;
+            this.Fuel -= this.FuelConsumption;
         }
     }
 }
