@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PlayersAndMonsters
 {
-    public class SoulMaster : Wizard
+    public class SoulMaster : DarkWizard
     {
         public SoulMaster(string username, int level) : base(username, level)
         {
