@@ -4,20 +4,20 @@ using System.Text;
 
 namespace ShoppingSpree
 {
-    class Person
+    public class Person
     {
         private const int moneyMinValue = 0;
 
         private string name;
-        private int money;
-        private List<Product> products;
+        private double money;
+        private readonly List<Product> products;
 
         private Person()
         {
             products = new List<Product>();
         }
 
-        public Person(string name, int money)
+        public Person(string name, double money)
             : this()
         {
             this.Name = name;
@@ -26,21 +26,21 @@ namespace ShoppingSpree
 
         public string Name
         {
-            get
-            {
-                return name;
+            get 
+            { 
+                return name; 
             }
-            private set
+            private set 
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new Exception("The name cannot be an empty string.");
+                    throw new Exception("Name cannot be empty");
                 }
-                name = value;
+                name = value; 
             }
         }
 
-        public int Money
+        public double Money
         {
             get
             {
@@ -48,9 +48,9 @@ namespace ShoppingSpree
             }
             private set
             {
-                if (value > moneyMinValue)
+                if (value < moneyMinValue)
                 {
-                    throw new Exception("Money cannot be a negative number.");
+                    throw new Exception("Money cannot be negative");
                 }
                 this.money = value;
             }
@@ -64,9 +64,34 @@ namespace ShoppingSpree
             }
         }
 
-        public void BuyProduct(Person person, Product product)
+        public string BuyProduct(Product product)
         {
+            if (this.Money >= product.Cost)
+            {
+                this.Money -= product.Cost;
+                this.products.Add(product);
+                return $"{this.Name} bought {product.Name}";
+            }
+            return $"{this.Name} can't afford {product.Name}";
+        }
 
+        public override string ToString()
+        {
+            if (this.products.Count > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+                List<string> boughtProducts = new List<string>();
+
+                foreach (var product in products)
+                {
+                    boughtProducts.Add(product.Name);
+                }
+
+                sb.Append($"{this.Name} - {string.Join(", ", boughtProducts)}");
+                return sb.ToString();
+            }
+
+            return $"{this.Name} - Nothing bought";
         }
     }
 }

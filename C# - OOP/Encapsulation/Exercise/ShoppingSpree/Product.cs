@@ -6,7 +6,7 @@ namespace ShoppingSpree
 {
     public class Product
     {
-        public Product(string name, int cost)
+        public Product(string name, double cost)
         {
             this.Name = name;
             this.Cost = cost;
@@ -14,6 +14,6 @@ namespace ShoppingSpree
 
         public string Name { get; set; }
 
-        public int Cost { get; set; }
+        public double Cost { get; set; }
     }
 }
