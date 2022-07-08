@@ -35,49 +35,49 @@ namespace PizzaCalories
 
         public string FlourType
         {
-            get 
-            { 
-                return flourType; 
+            get
+            {
+                return flourType;
             }
-            private set 
+            private set
             {
                 if (!modifiers.ContainsKey(value))
                 {
                     throw new Exception(doughTypeExceptionMessage);
                 }
-                flourType = value; 
+                flourType = value;
             }
         }
 
         public string BakingTechnique
         {
-            get 
-            { 
-                return bakingTechnique; 
+            get
+            {
+                return bakingTechnique;
             }
-            private set 
+            private set
             {
                 if (!modifiers.ContainsKey(value))
                 {
                     throw new Exception(doughTypeExceptionMessage);
                 }
-                bakingTechnique = value; 
+                bakingTechnique = value;
             }
         }
 
         public double Weight
         {
-            get 
+            get
             {
-                return weight; 
+                return weight;
             }
-            private set 
+            private set
             {
                 if (value < doughWeightMinLimit || value > doughWeightMaxLimit)
                 {
                     throw new Exception($"Dough weight should be in the range [{doughWeightMinLimit}..{doughWeightMaxLimit}].");
                 }
-                weight = value; 
+                weight = value;
             }
         }
 

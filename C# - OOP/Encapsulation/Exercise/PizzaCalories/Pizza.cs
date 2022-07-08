@@ -1,42 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using System.Linq;
 
 namespace PizzaCalories
 {
-    public class Pizza // step 5 to be continued!
+    public class Pizza
     {
         private string name;
         private readonly List<Topping> toppings;
         private double totalCalories;
 
-        private Pizza(Topping[] toppings)
+        private Pizza()
         {
-            this.toppings = toppings.ToList();
-            totalCalories = CalculateTotalCalories();
+            this.toppings = new List<Topping>();
         }
 
-        public Pizza(string name, Dough dough, params Topping[] toppings)
-            : this(toppings)
+        public Pizza(string name)
+            : this()
         {
             this.Name = name;
-            this.Dough = dough;
         }
 
         public string Name
         {
-            get 
+            get
             {
                 return name;
             }
             private set
             {
+                if (string.IsNullOrEmpty(value) || value.Length > 15)
+                {
+                    throw new Exception("Pizza name should be between 1 and 15 symbols.");
+                }
                 name = value;
             }
         }
 
-        public Dough Dough { get; private set; }
+        public Dough Dough { get; set; }
 
         public IReadOnlyCollection<Topping> Toppings
         {
@@ -58,6 +60,19 @@ namespace PizzaCalories
             }
         }
 
+        internal void AddTopping(Topping topping)
+        {
+            if (toppings.Count <= 10)
+            {
+                toppings.Add(topping);
+                TotalCalories = CalculateTotalCalories();
+            }
+            else
+            {
+                throw new Exception("Number of toppings should be in range [0..10].");
+            }
+        }
+
         private double CalculateTotalCalories()
         {
             double toppingsCaloriesSum = 0;
@@ -67,6 +82,11 @@ namespace PizzaCalories
             }
             double result = this.Dough.CaloriesPerGram + toppingsCaloriesSum;
             return result;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Name} - {this.TotalCalories:f2} Calories.";
         }
     }
 }

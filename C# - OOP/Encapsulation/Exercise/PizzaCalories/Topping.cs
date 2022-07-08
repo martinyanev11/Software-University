@@ -19,7 +19,7 @@ namespace PizzaCalories
             { "Meat", 1.2  },
             { "Veggies", 0.8  },
             { "Cheese", 1.1  },
-            { "Sause", 0.9  },
+            { "Sauce", 0.9  },
         };
 
         public Topping(string type, double weight)
@@ -31,33 +31,33 @@ namespace PizzaCalories
 
         public string Type
         {
-            get 
-            { 
-                return type; 
+            get
+            {
+                return type;
             }
-            private set 
+            private set
             {
                 if (!modifiers.ContainsKey(value))
                 {
                     throw new Exception($"Cannot place {value} on top of your pizza.");
                 }
-                type = value; 
+                type = value;
             }
         }
 
         public double Weight
         {
-            get 
+            get
             {
-                return weight; 
+                return weight;
             }
-            private set 
+            private set
             {
                 if (value < weightMinValue || value > weightMaxValue)
                 {
                     throw new Exception($"{this.Type} weight should be in the range [{weightMinValue}..{weightMaxValue}].");
                 }
-                weight = value; 
+                weight = value;
             }
         }
 
