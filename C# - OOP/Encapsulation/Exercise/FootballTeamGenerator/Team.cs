@@ -54,15 +54,16 @@ namespace FootballTeamGenerator
 
         private int CalculateTeamRating()
         {
-            int result = 0;
+            double result = 0;
 
             foreach (Player player in players)
             {
                 result += player.SkillLevel;
             }
             result /= players.Count;
+            int roundedResult = (int)Math.Round(result);
 
-            return result;
+            return roundedResult;
         }
 
         public void AddPlayer(Player player)

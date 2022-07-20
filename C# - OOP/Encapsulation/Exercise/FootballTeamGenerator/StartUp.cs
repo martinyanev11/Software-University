@@ -16,17 +16,18 @@ namespace FootballTeamGenerator
                 {
                     string[] cmdArgs = command.Split(";", StringSplitOptions.RemoveEmptyEntries);
                     bool isFound = false;
-                    switch (cmdArgs[0])
+                    string commandType = cmdArgs[0];
+                    string teamName = cmdArgs[1];
+
+                    switch (commandType)
                     {
                         case "Team":
-                            string teamName = cmdArgs[1];
                             Team team = new Team(teamName);
                             teams.Add(team);
                             break;
 
                         case "Add":
                             //Add;{TeamName};{PlayerName};{Endurance};{Sprint};{Dribble};{Passing};{Shooting}" 
-                            string teamNameToSearch = cmdArgs[1];
                             string playerName = cmdArgs[2];
                             int endurance = int.Parse(cmdArgs[3]);
                             int sprint = int.Parse(cmdArgs[4]);
@@ -38,7 +39,7 @@ namespace FootballTeamGenerator
 
                             foreach (Team t in teams)
                             {
-                                if (t.Name == teamNameToSearch)
+                                if (t.Name == teamName)
                                 {
                                     t.AddPlayer(player);
                                     isFound = true;
@@ -47,17 +48,16 @@ namespace FootballTeamGenerator
                             }
                             if (isFound == false)
                             {
-                                Console.WriteLine($"Team {teamNameToSearch} does not exist.");
+                                Console.WriteLine($"Team {teamName} does not exist.");
                             }
                             break;
 
                         case "Remove":
-                            string teamToRemoveFrom = cmdArgs[1];
                             string playerToRemove = cmdArgs[2];
 
                             foreach (Team t in teams)
                             {
-                                if (t.Name == teamToRemoveFrom)
+                                if (t.Name == teamName)
                                 {
                                     t.RemovePlayer(playerToRemove);
                                     isFound = true;
@@ -66,24 +66,23 @@ namespace FootballTeamGenerator
                             }
                             if (isFound == false)
                             {
-                                Console.WriteLine($"Player {playerToRemove} is not in {teamToRemoveFrom} team.");
+                                Console.WriteLine($"Player {playerToRemove} is not in {teamName} team.");
                             }
                             break;
 
                         case "Rating":
-                            string teamRatingToShow = cmdArgs[1];
                             foreach (Team t in teams)
                             {
-                                if (t.Name == teamRatingToShow)
+                                if (t.Name == teamName)
                                 {
-                                    Console.WriteLine(t.Rating);
+                                    Console.WriteLine($"{t.Name} - {t.Rating}");
                                     isFound = true;
                                     break;
                                 }
                             }
                             if (isFound == false)
                             {
-                                Console.WriteLine($"Team {teamRatingToShow} does not exist.");
+                                Console.WriteLine($"Team {teamName} does not exist.");
                             }
                             break;
                     }

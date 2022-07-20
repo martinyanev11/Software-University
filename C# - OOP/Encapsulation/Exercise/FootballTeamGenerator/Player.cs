@@ -17,7 +17,7 @@ namespace FootballTeamGenerator
         private int dribble;
         private int passing;
         private int shooting;
-        private int skillLevel;
+        private double skillLevel;
 
         public Player(string name, int endurance, int sprint, int dribble, int passing, int shooting)
         {
@@ -120,7 +120,7 @@ namespace FootballTeamGenerator
                 shooting = value;
             }
         }
-        public int SkillLevel
+        public double SkillLevel
         {
             get
             {
@@ -132,9 +132,9 @@ namespace FootballTeamGenerator
             }
         }
 
-        private int CalculateSkillLevel()
+        private double CalculateSkillLevel()
         {
-            int result = (this.Endurance + this.Sprint + this.Dribble + this.Passing + this.Shooting) / 5;
+            double result = (this.Endurance + this.Sprint + this.Dribble + this.Passing + this.Shooting) / 5.0;
             return result;
         }
     }
