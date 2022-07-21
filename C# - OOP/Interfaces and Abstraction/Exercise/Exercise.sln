@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonInfo", "PersonInfo\PersonInfo.csproj", "{204E32E4-A3B1-4812-B56A-3B06C185F025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telephony", "Telephony\Telephony.csproj", "{2DD559A3-D55A-41C8-96A0-26CFF8430220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telephony", "Telephony\Telephony.csproj", "{2DD559A3-D55A-41C8-96A0-26CFF8430220}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorderControl", "BorderControl\BorderControl.csproj", "{BD90AE9B-019B-48A4-9000-206F387DF811}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesAndAbstraction", "MilitaryElite\InterfacesAndAbstraction.csproj", "{D034CDB6-BC85-461A-B365-72EE407F5AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2DD559A3-D55A-41C8-96A0-26CFF8430220}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DD559A3-D55A-41C8-96A0-26CFF8430220}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DD559A3-D55A-41C8-96A0-26CFF8430220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD90AE9B-019B-48A4-9000-206F387DF811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD90AE9B-019B-48A4-9000-206F387DF811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD90AE9B-019B-48A4-9000-206F387DF811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD90AE9B-019B-48A4-9000-206F387DF811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D034CDB6-BC85-461A-B365-72EE407F5AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D034CDB6-BC85-461A-B365-72EE407F5AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D034CDB6-BC85-461A-B365-72EE407F5AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D034CDB6-BC85-461A-B365-72EE407F5AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
