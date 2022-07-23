@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32428.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operations", "01.MathOperations\Operations.csproj", "{9BE8DC41-47CF-4B5B-9683-AD2ED1542BDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "02.Animals\Animals.csproj", "{C23A0C5B-5195-4DC9-96D2-1ACEA0E29E3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "03.Shapes\Shapes.csproj", "{413C5AC1-6842-49EB-9820-8DC8FA0123E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BE8DC41-47CF-4B5B-9683-AD2ED1542BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE8DC41-47CF-4B5B-9683-AD2ED1542BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE8DC41-47CF-4B5B-9683-AD2ED1542BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE8DC41-47CF-4B5B-9683-AD2ED1542BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C23A0C5B-5195-4DC9-96D2-1ACEA0E29E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23A0C5B-5195-4DC9-96D2-1ACEA0E29E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23A0C5B-5195-4DC9-96D2-1ACEA0E29E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23A0C5B-5195-4DC9-96D2-1ACEA0E29E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413C5AC1-6842-49EB-9820-8DC8FA0123E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413C5AC1-6842-49EB-9820-8DC8FA0123E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413C5AC1-6842-49EB-9820-8DC8FA0123E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413C5AC1-6842-49EB-9820-8DC8FA0123E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A57CF473-F592-47D3-A753-31C4679D2367}
+	EndGlobalSection
+EndGlobal
